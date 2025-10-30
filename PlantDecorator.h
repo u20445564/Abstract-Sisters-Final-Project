@@ -14,23 +14,12 @@ public:
 
     virtual ~PlantDecorator() {}  // No deletion here, since it doesn't own the object
 
-    virtual void display() const {
-        if (decoratedPlant)
-            decoratedPlant->display();
+    virtual void decorate() {
+        if (this->decoratedPlant)
+            this->decoratedPlant->decorate();
     }
 
-    virtual void careForPlant() {
-        if (decoratedPlant)
-            decoratedPlant->careForPlant();
-    }
-
-    virtual double getPrice() const {
-        return decoratedPlant ? decoratedPlant->getPrice() : 0.0;
-    }
-
-    virtual std::string getDescription() const {
-        return decoratedPlant ? decoratedPlant->getDescription() : "";
-    }
 };
 
 #endif
+
