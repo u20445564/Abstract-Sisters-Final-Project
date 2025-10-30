@@ -12,7 +12,7 @@ public:
     // The decorator does not own the plant — it just references it
     PlantDecorator(PlantType* plant) : decoratedPlant(plant) {}
 
-    virtual ~PlantDecorator() {}  // No deletion here, since it doesn't own the object
+    virtual ~PlantDecorator() {}  
 
     virtual void decorate() {
         if (this->decoratedPlant)
@@ -22,4 +22,5 @@ public:
 };
 
 #endif
+
 
